@@ -17,7 +17,7 @@ document.querySelector('.swipe1').addEventListener('swipe-left', e => {
 ```
 
 ## What do I get in **detail** ?
-**name :** swipe / swipe-left / swipe-right / swipe-up / swipe-down / swiping / swiping-left / swiping-right / swiping-up / swiping-down  
+==name :== swipe / swipe-left / swipe-right / swipe-up / swipe-down / swiping / swiping-left / swiping-right / swiping-up / swiping-down  
 **type :** swipe / swiping  
 **dir :** left / right / up / down  
 **pointerType :** mouse / touch /pen  
