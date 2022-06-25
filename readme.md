@@ -17,7 +17,7 @@ document.querySelector('.swipe1').addEventListener('swipe-left', e => {
 ```
 
 ## What do I get in **detail** ?
-<mark>name :</mark> swipe / swipe-left / swipe-right / swipe-up / swipe-down / swiping / swiping-left / swiping-right / swiping-up / swiping-down  
+**name :** swipe / swipe-left / swipe-right / swipe-up / swipe-down / swiping / swiping-left / swiping-right / swiping-up / swiping-down  
 **type :** swipe / swiping  
 **dir :** left / right / up / down  
 **pointerType :** mouse / touch /pen  
@@ -33,4 +33,24 @@ document.querySelector('.swipe1').addEventListener('swipe-left', e => {
 **deltaY :** vertical delta between start and current positions  
 **duration :** time duration in ms since start 
 
+## constructor
+```
+/**
+* @param {HTMLElement} el : element to observe
+* @param {string} events : list of events to be registered separated by a space
+* @param {Integer} threshold : minimum distance in pixels between the start and the end of the movement
+* @param {Integer} timeout : maximum delay in ms between the start and the end of the movement
+*/
+new SwipeObserver(el, events, threshold, timeout)
+```
+
 ## Methods
+```
+/**
+* @param {string} events : list of events to be registered separated by a space
+* @param {Integer} threshold : minimum distance in pixels between the start and the end of the movement
+* @param {Integer} timeout : maximum delay in ms between the start and the end of the movement
+*/
+on(events = 'swipe', threshold, timeout)
+```
+
