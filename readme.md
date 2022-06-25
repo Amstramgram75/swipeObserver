@@ -1,1 +1,1 @@
-Un test
+A small ES6 class to observe swipe events on a HTML element.
