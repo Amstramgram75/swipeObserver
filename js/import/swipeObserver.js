@@ -195,7 +195,7 @@ export default class SwipeObserver {
    * @param {Integer} threshold : minimum distance in pixels between the start and the end of the movement
    * @param {Integer} timeout : maximum delay in ms between the start and the end of the movement
    */
-  constructor(el, events, threshold, timeout) {
+  constructor(el, events = '', threshold = this.#threshold, timeout = this.#timeout) {
     this.#el = el
     if (typeof events === 'string') {
       this.on(events, threshold, timeout)
@@ -263,25 +263,20 @@ export default class SwipeObserver {
   /*                          GETTERS / SETTERS                                 */
   /* -------------------------------------------------------------------------- */
   /**
-   * @getter active
-   * @returns {boolean} state of the observer
-   */
-  get active() {
-    return this.#active
-  }
-  /**
    * @getter threshold
    * @returns {int}
    */
   get threshold() {
     return this.#threshold
   }
+  
   /**
    * @setter {integer} threshold
    */
   set threshold(t) {
     this.#threshold = (t > 0) ? t : this.#threshold
   }
+
   /**
    * @getter timeout
    * @returns {int}
@@ -289,11 +284,20 @@ export default class SwipeObserver {
   get timeout() {
     return this.#timeout
   }
+
   /**
    * @setter {integer} timeout
    */
   set timeout(t) {
     this.#timeout = (t > 0) ? t : this.#timeout
+  }
+
+  /**
+   * @getter active
+   * @returns {boolean} state of the observer
+   */
+   get active() {
+    return this.#active
   }
 
   /**
