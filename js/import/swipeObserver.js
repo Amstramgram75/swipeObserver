@@ -269,7 +269,7 @@ export default class SwipeObserver {
   get threshold() {
     return this.#threshold
   }
-  
+
   /**
    * @setter {integer} threshold
    */

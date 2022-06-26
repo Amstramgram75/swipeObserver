@@ -22,7 +22,7 @@ swipeObserver.off('swipe-right')
 swipeObserver.on('swipe-up')
 ```
 
-## What do I get in **detail** ?
+## What do I get in **event.detail** ?
 **name :** swipe / swipe-left / swipe-right / swipe-up / swipe-down / swiping / swiping-left / swiping-right / swiping-up / swiping-down  
 **type :** swipe / swiping  
 **dir :** left / right / up / down  
@@ -50,8 +50,20 @@ swipeObserver.on('swipe-up')
 new SwipeObserver(el, events, threshold, timeout)
 ```
 Note that there is no check about the *el* validity !  
-All registered events share the same *threshold* and *timeout* values.
+All registered events share the same *threshold* and *timeout* values.  
+Available events :
+- swipe
+- swipe-left
+- swipe-right
+- swipe-up
+- swipe-down
+- swiping
+- swiping-left
+- swiping-right
+- swiping-up
+- swiping-down  
 
+If registered, *Swiping* events are dispatched during pointer movements.  
 ## Methods
 ### on
 ```
@@ -69,7 +81,7 @@ swipeObserver.on()
 ```
 /**
 * @param {String} events : list of events to removed separated by a space
-* if events is empty, all listener are removed
+* if events is empty, all dispatchers are removed
 */
 const swipeObserver = new SwipeObserver(el, 'swipe-left swiping-left swipe-right swiping-right')
 //Remove swiping listeners

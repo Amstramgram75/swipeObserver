@@ -46,13 +46,14 @@ function init (str) {
 	const swipe = new SwipeObserver(document.querySelector('.swipe'), 'swipe swipe-left swiping')
 	document.querySelector('.swipe').addEventListener('swipe', function(e){console.log('SWIPE', e.detail)})
 	document.querySelector('.swipe').addEventListener('swipe-left', function(e){console.log('SWIPE-LEFT', e.detail)})
-	// document.querySelector('.swipe').addEventListener('swiping', function(e){console.log('SWIPING', e.detail)})
+	document.querySelector('.swipe').addEventListener('swiping', function(e){console.log('SWIPING', e.detail)})
 	document.querySelector('.inswipe').addEventListener('click', function(e){
 		if(swipe.active) {
 			swipe.off()
 		} else swipe.on('swipe-left')
 		console.log(swipe.events)
 	})
+	console.log(swipe.events)
 }
 
 function resize(){
