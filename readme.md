@@ -69,8 +69,13 @@ swipeObserver.on()
 ```
 /**
 * @param {String} events : list of events to removed separated by a space
+* if events is empty, all listener are removed
 */
-off(events)
+const swipeObserver = new SwipeObserver(el, 'swipe-left swiping-left swipe-right swiping-right')
+//Remove swiping listeners
+swipeObserver.off('swiping-left swiping-right')
+//Remove all listeners
+swipeObserver.off()
 ```
 ## Getters / Setters
 ### threshold
