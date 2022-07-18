@@ -5,7 +5,7 @@
 ```
 import SwipeObserver from './import/swipeObserver.js'
 
-const swipeObserver = new SwipeObserver(document.querySelector('.swipe'), 'swipe-right, swipe-left')  
+const swipeObserver = new SwipeObserver(document.querySelector('.swipe'), 'swipe-right swipe-left')  
 
 document.querySelector('.swipe').addEventListener('swipe-right', e => {
   console.log('Swipe to the right !', e.detail)

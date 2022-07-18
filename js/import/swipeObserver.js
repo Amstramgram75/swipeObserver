@@ -12,7 +12,7 @@ import pointerDetector from './pointerDetector.js'
  * @param {Integer} timeout - maximum delay in ms between the start and the end of the movement
  * 
  * @example1 :
- * const swipeObserver1 = new SwipeObserver(document.querySelector('.swipe1'), 'swipe-right, swipe-left')
+ * const swipeObserver1 = new SwipeObserver(document.querySelector('.swipe1'), 'swipe-right swipe-left')
  * document.querySelector('.swipe1').addEventListener('swipe-right', e => console.log('Swipe to the right !', e.detail))
  * document.querySelector('.swipe1').addEventListener('swipe-left', e => console.log('Swipe to the left !', e.detail))
  * 
